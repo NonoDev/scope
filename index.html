@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseña tu Telescopio</title>
-    <!-- Enlace a Foundation CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" integrity="sha384-XXXX" crossorigin="anonymous">
+    <!-- Enlace a Foundation CSS (sin integrity para evitar bloqueos) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
     <!-- Enlace a tus estilos personalizados -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -49,9 +49,15 @@
                 </div>
             </div>
         </form>
+        <!-- Contenedor para la simulación 3D -->
+        <div id="simulation" style="width: 100%; height: 500px; margin-top:20px;"></div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-XXXX" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" integrity="sha384-XXXX" crossorigin="anonymous"></script>
+    <!-- Cargar primero jQuery y Foundation JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"></script>
+    <!-- Cargar Three.js antes del script principal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <!-- Cargar script principal -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
